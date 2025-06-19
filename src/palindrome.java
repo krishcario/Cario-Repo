@@ -4,27 +4,18 @@ public class palindrome {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter the string you want to check: ");
-        String input = scanner.nextLine();
-        String inputLower = input.toLowerCase();
+        System.out.print("What factorial do you want to find? ");
+        int num = scanner.nextInt();
 
-        int start = 0;
-        int end = inputLower.length() - 1;
-        boolean isPalindrome = true;
-
-        while (start < end) {
-            if (inputLower.charAt(start) != inputLower.charAt(end)) {
-                isPalindrome = false;
-                break;
-            }
-            start++;
-            end--;
-        }
-
-        if (isPalindrome) {
-            System.out.println("Your string \"" + input + "\" is a palindrome!");
+        if (num < 0) {
+            System.out.println("Factorial is not defined for negative numbers.");
         } else {
-            System.out.println("Your string \"" + input + "\" is not a palindrome.");
+            System.out.println("The factorial of " + num + " is " + factorial(num));
         }
+    }
+
+    private static int factorial(int num) {
+        if (num == 0 || num == 1) return 1;
+        return num * factorial(num - 1);
     }
 }
