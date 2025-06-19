@@ -14,4 +14,5 @@ public class greetingApp {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM-dd-yyyy HH:mm:ss");
         System.out.println("The current date and time is " + currentDateTime.format(formatter) + ".");
     }
+
 }
