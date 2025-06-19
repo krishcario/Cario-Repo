@@ -11,6 +11,7 @@ public class prime {
             }
         }
 
+
         System.out.println("The prime numbers from 1 through 100 are:");
         for (int number : primeNumbers) {
             System.out.println(number);
